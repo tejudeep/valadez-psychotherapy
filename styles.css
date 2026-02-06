@@ -240,6 +240,14 @@ img {
     color: white;
 }
 
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 40px;
+    align-items: center;
+}
+
 .nav-link {
     font-size: 0.8rem;
     font-weight: 400;
@@ -1011,13 +1019,19 @@ img {
     }
     
    .nav-menu {
-       display: flex;
-       flex-direction: row;
-       list-style: none;
-       gap: 40px;
+       position: fixed;
+       top: 0;
+       right: -100%;
+       width: 100%;
+       height: 100vh;
+       background: var(--color-primary);
+       flex-direction: column;
+       justify-content: center;
        align-items: center;
+       gap: 30px;
+       transition: right var(--transition-medium);
    }
-    
+       
     .nav-menu.active {
         right: 0;
     }
