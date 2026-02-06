@@ -209,15 +209,15 @@ img {
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 20px 0;
+    padding: 15px 0;
+    background-color: var(--color-primary);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     transition: all var(--transition-medium);
 }
 
 .navbar.scrolled {
-    background-color: rgba(255, 253, 249, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 15px 0;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    padding: 12px 0;
+    background-color: var(--color-primary-dark);
 }
 
 .nav-container {
@@ -234,18 +234,10 @@ img {
     font-size: 1.5rem;
     font-weight: 500;
     color: white;
-    transition: color var(--transition-medium);
 }
 
 .navbar.scrolled .nav-logo {
-    color: var(--color-text-dark);
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-    align-items: center;
+    color: white;
 }
 
 .nav-link {
@@ -259,22 +251,7 @@ img {
 }
 
 .navbar.scrolled .nav-link {
-    color: var(--color-text);
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background-color: currentColor;
-    transition: width var(--transition-medium);
-}
-
-.nav-link:hover::after {
-    width: 100%;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .nav-link:hover {
@@ -282,16 +259,12 @@ img {
 }
 
 .navbar.scrolled .nav-link:hover {
-    color: var(--color-primary);
+    color: white;
 }
 
 .nav-cta {
     padding: 10px 20px;
     border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.nav-cta::after {
-    display: none;
 }
 
 .nav-cta:hover {
@@ -301,12 +274,12 @@ img {
 }
 
 .navbar.scrolled .nav-cta {
-    border-color: var(--color-primary);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .navbar.scrolled .nav-cta:hover {
-    background-color: var(--color-primary);
-    color: white !important;
+    background-color: white;
+    color: var(--color-primary-dark) !important;
 }
 
 /* Mobile Navigation Toggle */
