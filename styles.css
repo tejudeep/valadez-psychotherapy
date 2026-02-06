@@ -332,37 +332,32 @@ img {
 }
 
 /* ============================================
-   HERO SECTION - NEW
+   HERO SECTION
    ============================================ */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-color: var(--color-cream);
-    padding: 120px 0 80px;
+    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-sand) 100%);
+    padding-top: 100px;
 }
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 60px;
+    grid-template-columns: 400px 1fr;
+    gap: 80px;
     align-items: center;
-}
-
-.hero-image {
-    position: relative;
 }
 
 .hero-image img {
     width: 100%;
-    max-width: 450px;
-    aspect-ratio: 4/5;
-    object-fit: cover;
+    height: auto;
+    display: block;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
 }
 
 .hero-content {
-    padding: 20px 0;
+    padding: 40px 0;
 }
 
 .hero-subtitle {
@@ -377,7 +372,7 @@ img {
 
 .hero-title {
     font-family: var(--font-heading);
-    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-size: 2.8rem;
     font-weight: 500;
     color: var(--color-text-dark);
     margin-bottom: 12px;
@@ -433,32 +428,22 @@ img {
     flex-wrap: wrap;
 }
 
-/* Hero Responsive */
-@media (max-width: 768px) {
-    .hero {
-        padding: 100px 0 60px;
-    }
-    
+@media (max-width: 900px) {
     .hero-grid {
         grid-template-columns: 1fr;
         gap: 40px;
         text-align: center;
     }
     
-    .hero-image {
-        order: -1;
-    }
-    
     .hero-image img {
-        max-width: 300px;
+        max-width: 320px;
         margin: 0 auto;
     }
     
     .hero-badges {
         grid-template-columns: 1fr;
-        max-width: 280px;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: 260px;
+        margin: 0 auto 35px;
     }
     
     .hero-buttons {
