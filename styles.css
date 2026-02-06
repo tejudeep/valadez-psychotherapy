@@ -508,16 +508,6 @@ img {
     position: relative;
 }
 
-.image-frame::before {
-    content: '';
-    position: absolute;
-    top: -15px;
-    left: -15px;
-    right: -15px;
-    bottom: -15px;
-    border: 1px solid var(--color-accent);
-    z-index: -1;
-}
 
 .placeholder-image {
     aspect-ratio: 4/5;
