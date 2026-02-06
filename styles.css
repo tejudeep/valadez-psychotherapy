@@ -1010,19 +1010,13 @@ img {
         z-index: 1001;
     }
     
-    .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 100%;
-        height: 100vh;
-        background: var(--color-warm-white);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-        transition: right var(--transition-medium);
-    }
+   .nav-menu {
+       display: flex;
+       flex-direction: row;
+       list-style: none;
+       gap: 40px;
+       align-items: center;
+   }
     
     .nav-menu.active {
         right: 0;
