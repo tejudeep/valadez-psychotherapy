@@ -3,7 +3,21 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', function() {
-    
+
+   // ============================================
+   // SPLASH SCREEN
+   // ============================================
+   const splash = document.getElementById('splash');
+   
+   setTimeout(() => {
+       splash.classList.add('hidden');
+   }, 4000);
+   
+   // Remove from DOM after animation
+   setTimeout(() => {
+       splash.style.display = 'none';
+   }, 5000);
+   
     // ============================================
     // NAVBAR SCROLL EFFECT
     // ============================================
