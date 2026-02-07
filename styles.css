@@ -322,7 +322,7 @@ img {
     align-items: center;
     padding-top: 100px;
     position: relative;
-    background: linear-gradient(145deg, #5c4d3d 0%, #7a6853 30%, #a89585 50%, #7a6853 70%, #5c4d3d 100%);
+    background: #5c4d3d;
 }
 
 .hero::before {
@@ -332,7 +332,10 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.15) 0%, transparent 60%);
+    background: 
+        radial-gradient(ellipse at 15% 15%, #d4c4a8 0%, transparent 50%),
+        radial-gradient(ellipse at 20% 20%, rgba(255,255,255,0.2) 0%, transparent 40%),
+        radial-gradient(ellipse at 0% 0%, #c9b8a4 0%, #8b7a66 35%, #5c4d3d 70%);
     pointer-events: none;
 }
 
