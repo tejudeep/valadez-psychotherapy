@@ -320,8 +320,22 @@ img {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 50%, #5a4a3a 100%);
+    background: linear-gradient(145deg, #a8b5a0 0%, #c9d4c0 25%, #e8dfd4 50%, #d4c4b0 75%, #bfae98 100%);
     padding-top: 100px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.3) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.2) 0%, transparent 35%);
+    pointer-events: none;
 }
 
 .hero-grid {
