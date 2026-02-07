@@ -322,22 +322,7 @@ img {
     align-items: center;
     padding-top: 100px;
     position: relative;
-    background: 
-        linear-gradient(180deg, 
-            #5c4d3d 0%, 
-            #6b5a48 8%, 
-            #7a6853 16%, 
-            #8b7a66 24%, 
-            #9c8b78 32%, 
-            #a89585 40%, 
-            #b5a393 48%, 
-            #c2b1a1 56%, 
-            #b5a393 64%, 
-            #a89585 72%, 
-            #9c8b78 80%, 
-            #8b7a66 88%, 
-            #7a6853 100%
-        );
+    background: linear-gradient(145deg, #5c4d3d 0%, #7a6853 30%, #a89585 50%, #7a6853 70%, #5c4d3d 100%);
 }
 
 .hero::before {
@@ -347,16 +332,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
-        repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 40px,
-            rgba(255,255,255,0.03) 40px,
-            rgba(255,255,255,0.03) 80px
-        ),
-        radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 80%, rgba(255,255,255,0.08) 0%, transparent 40%);
+    background: radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.15) 0%, transparent 60%);
     pointer-events: none;
 }
 
