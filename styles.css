@@ -322,7 +322,7 @@ img {
     align-items: center;
     padding-top: 100px;
     position: relative;
-    background: #5c4d3d;
+    background: #4a3d30;
 }
 
 .hero::before {
@@ -333,9 +333,10 @@ img {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(ellipse at 15% 15%, #d4c4a8 0%, transparent 50%),
-        radial-gradient(ellipse at 20% 20%, rgba(255,255,255,0.2) 0%, transparent 40%),
-        radial-gradient(ellipse at 0% 0%, #c9b8a4 0%, #8b7a66 35%, #5c4d3d 70%);
+        radial-gradient(circle at 0% 0%, #e8d9c5 0%, transparent 35%),
+        radial-gradient(circle at 10% 10%, #d4c4a8 0%, transparent 45%),
+        radial-gradient(circle at 5% 5%, rgba(255,255,255,0.3) 0%, transparent 30%),
+        linear-gradient(135deg, #c9b8a4 0%, #8b7a66 25%, #5c4d3d 50%, #4a3d30 75%);
     pointer-events: none;
 }
 
@@ -426,6 +427,28 @@ img {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
+}
+
+.hero .btn-primary {
+    background-color: white;
+    color: #4a3d30;
+}
+
+.hero .btn-primary:hover {
+    background-color: #f5f0ea;
+    transform: translateY(-2px);
+}
+
+.hero .btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.hero .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: white;
+    color: white;
 }
 
 
