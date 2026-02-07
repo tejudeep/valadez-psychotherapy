@@ -320,7 +320,7 @@ img {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(145deg, #b8c9c4 0%, #d4ddd8 30%, #e8e4df 60%, #d4cfc7 100%);
+    background: linear-gradient(160deg, #d4e0d1 0%, #f5f2ed 40%, #ebe4dc 100%);
     padding-top: 100px;
     position: relative;
 }
