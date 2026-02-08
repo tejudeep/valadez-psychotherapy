@@ -4,24 +4,24 @@
 
 /* CSS Variables */
 :root {
-    /* Color Palette - Warm, calming earth tones */
-    --color-primary: #8B7355;
-    --color-primary-dark: #6B5744;
-    --color-primary-light: #A69076;
+    /* Color Palette - Calming Purple */
+    --color-primary: #7c6a9c;
+    --color-primary-dark: #5d4e7a;
+    --color-primary-light: #9d8bb8;
     
-    --color-secondary: #C4A77D;
-    --color-accent: #D4C4B0;
+    --color-secondary: #b8a9d4;
+    --color-accent: #d4cce6;
     
-    --color-sage: #9CAF88;
-    --color-sage-light: #B8C9A9;
+    --color-sage: #9c8bb8;
+    --color-sage-light: #c4b8d9;
     
-    --color-cream: #FAF8F5;
-    --color-warm-white: #FFFDF9;
-    --color-sand: #E8E0D5;
+    --color-cream: #f8f6fb;
+    --color-warm-white: #fdfcfe;
+    --color-sand: #e8e4f0;
     
-    --color-text: #3D3D3D;
-    --color-text-light: #6B6B6B;
-    --color-text-dark: #2D2D2D;
+    --color-text: #3d3d3d;
+    --color-text-light: #6b6b6b;
+    --color-text-dark: #2d2d2d;
     
     /* Typography */
     --font-heading: 'Cormorant Garamond', Georgia, serif;
@@ -322,7 +322,8 @@ img {
     align-items: center;
     padding-top: 100px;
     position: relative;
-    background: #4a3d30;
+    background: linear-gradient(135deg, #4a3d6e 0%, #5d4e7a 25%, #7c6a9c 50%, #5d4e7a 75%, #4a3d6e 100%);
+    overflow: hidden;
 }
 
 .hero::before {
@@ -333,10 +334,8 @@ img {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 0% 0%, #e8d9c5 0%, transparent 35%),
-        radial-gradient(circle at 10% 10%, #d4c4a8 0%, transparent 45%),
-        radial-gradient(circle at 5% 5%, rgba(255,255,255,0.3) 0%, transparent 30%),
-        linear-gradient(135deg, #c9b8a4 0%, #8b7a66 25%, #5c4d3d 50%, #4a3d30 75%);
+        radial-gradient(circle at 0% 0%, rgba(255,255,255,0.15) 0%, transparent 40%),
+        radial-gradient(circle at 100% 100%, rgba(255,255,255,0.1) 0%, transparent 35%);
     pointer-events: none;
 }
 
