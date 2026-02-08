@@ -328,10 +328,10 @@ img {
 .hero-glow {
     position: absolute;
     top: -20%;
-    left: -10%;
-    width: 50%;
-    height: 70%;
-    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
+    left: -15%;
+    width: 60%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 30%, transparent 60%);
     pointer-events: none;
     z-index: 0;
 }
@@ -1315,7 +1315,7 @@ img {
 }
 
 /* ============================================
-   FLOATING BUBBLES
+   FLOATING CLOUDS
    ============================================ */
 .floating-shapes {
     position: absolute;
@@ -1331,93 +1331,118 @@ img {
 .floating-shapes span {
     position: absolute;
     display: block;
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.25);
     border-radius: 50%;
-    top: 100%;
-    animation: floatUp 15s linear infinite;
+    filter: blur(10px);
+    animation: drift linear infinite;
+}
+
+.floating-shapes span::before,
+.floating-shapes span::after {
+    content: '';
+    position: absolute;
+    background: inherit;
+    border-radius: 50%;
+}
+
+.floating-shapes span::before {
+    width: 70%;
+    height: 70%;
+    top: -30%;
+    left: 20%;
+}
+
+.floating-shapes span::after {
+    width: 60%;
+    height: 60%;
+    top: -20%;
+    right: 10%;
 }
 
 .floating-shapes span:nth-child(1) {
-    left: 10%;
-    width: 80px;
-    height: 80px;
-    animation-duration: 18s;
-    animation-delay: 0s;
+    width: 120px;
+    height: 50px;
+    top: 15%;
+    left: -150px;
+    animation-duration: 35s;
 }
 
 .floating-shapes span:nth-child(2) {
-    left: 25%;
-    width: 40px;
-    height: 40px;
-    animation-duration: 14s;
-    animation-delay: 2s;
-}
-
-.floating-shapes span:nth-child(3) {
-    left: 40%;
-    width: 60px;
-    height: 60px;
-    animation-duration: 20s;
-    animation-delay: 1s;
-}
-
-.floating-shapes span:nth-child(4) {
-    left: 55%;
-    width: 100px;
-    height: 100px;
-    animation-duration: 22s;
-    animation-delay: 3s;
-}
-
-.floating-shapes span:nth-child(5) {
-    left: 70%;
-    width: 50px;
-    height: 50px;
-    animation-duration: 16s;
+    width: 80px;
+    height: 35px;
+    top: 35%;
+    left: -100px;
+    animation-duration: 40s;
     animation-delay: 5s;
 }
 
-.floating-shapes span:nth-child(6) {
-    left: 85%;
-    width: 70px;
-    height: 70px;
-    animation-duration: 19s;
+.floating-shapes span:nth-child(3) {
+    width: 150px;
+    height: 60px;
+    top: 55%;
+    left: -180px;
+    animation-duration: 45s;
     animation-delay: 2s;
 }
 
+.floating-shapes span:nth-child(4) {
+    width: 100px;
+    height: 40px;
+    top: 75%;
+    left: -130px;
+    animation-duration: 38s;
+    animation-delay: 8s;
+}
+
+.floating-shapes span:nth-child(5) {
+    width: 90px;
+    height: 38px;
+    top: 25%;
+    left: -120px;
+    animation-duration: 42s;
+    animation-delay: 12s;
+}
+
+.floating-shapes span:nth-child(6) {
+    width: 130px;
+    height: 55px;
+    top: 65%;
+    left: -160px;
+    animation-duration: 50s;
+    animation-delay: 3s;
+}
+
 .floating-shapes span:nth-child(7) {
-    left: 5%;
-    width: 35px;
-    height: 35px;
-    animation-duration: 12s;
-    animation-delay: 4s;
+    width: 70px;
+    height: 30px;
+    top: 45%;
+    left: -90px;
+    animation-duration: 36s;
+    animation-delay: 15s;
 }
 
 .floating-shapes span:nth-child(8) {
-    left: 60%;
-    width: 90px;
-    height: 90px;
-    animation-duration: 24s;
-    animation-delay: 1s;
+    width: 110px;
+    height: 45px;
+    top: 85%;
+    left: -140px;
+    animation-duration: 44s;
+    animation-delay: 7s;
 }
 
-@keyframes floatUp {
+@keyframes drift {
     0% {
-        top: 100%;
-        transform: rotate(0deg);
+        transform: translateX(0);
         opacity: 0;
     }
     5% {
-        opacity: 0.15;
+        opacity: 0.25;
     }
     95% {
-        opacity: 0.15;
+        opacity: 0.25;
     }
     100% {
-        top: -20%;
-        transform: rotate(360deg);
+        transform: translateX(calc(100vw + 200px));
         opacity: 0;
     }
 }
