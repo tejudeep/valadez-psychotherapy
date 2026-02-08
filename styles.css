@@ -316,7 +316,6 @@ img {
 /* ============================================
    HERO SECTION
    ============================================ */
-
 .hero {
     min-height: 100vh;
     display: flex;
@@ -324,45 +323,17 @@ img {
     padding-top: 100px;
     position: relative;
     background: linear-gradient(135deg, #4a3d6e 0%, #5d4e7a 40%, #7c6a9c 100%);
-    overflow: hidden;
 }
 
-.hero::before {
-    content: '';
+.hero-glow {
     position: absolute;
-    top: -50%;
-    left: -30%;
-    width: 80%;
-    height: 80%;
-    background: 
-        conic-gradient(
-            from 180deg at 50% 50%,
-            transparent 0deg,
-            rgba(255,255,255,0.03) 10deg,
-            transparent 20deg,
-            rgba(255,255,255,0.05) 40deg,
-            transparent 50deg,
-            rgba(255,255,255,0.03) 70deg,
-            transparent 80deg,
-            rgba(255,255,255,0.04) 100deg,
-            transparent 110deg,
-            rgba(255,255,255,0.03) 130deg,
-            transparent 140deg,
-            rgba(255,255,255,0.05) 160deg,
-            transparent 180deg
-        ),
-        radial-gradient(circle at 0% 0%, rgba(255,255,255,0.25) 0%, transparent 50%);
+    top: -20%;
+    left: -10%;
+    width: 50%;
+    height: 70%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
     pointer-events: none;
-    animation: rotateRays 60s linear infinite;
-}
-
-@keyframes rotateRays {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+    z-index: 0;
 }
 
 .hero-grid {
@@ -488,6 +459,37 @@ img {
     z-index: 2;
 }
 
+/* Floating Bubbles */
+.bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: rise 20s infinite ease-in;
+    z-index: 0;
+}
+
+.bubble:nth-child(1) { width: 60px; height: 60px; left: 10%; animation-duration: 18s; }
+.bubble:nth-child(2) { width: 40px; height: 40px; left: 30%; animation-duration: 22s; animation-delay: 2s; }
+.bubble:nth-child(3) { width: 80px; height: 80px; left: 50%; animation-duration: 25s; animation-delay: 4s; }
+.bubble:nth-child(4) { width: 50px; height: 50px; left: 70%; animation-duration: 20s; animation-delay: 1s; }
+.bubble:nth-child(5) { width: 70px; height: 70px; left: 85%; animation-duration: 28s; animation-delay: 3s; }
+
+@keyframes rise {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.1;
+    }
+    90% {
+        opacity: 0.1;
+    }
+    100% {
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
 
 @media (max-width: 900px) {
     .hero-grid {
