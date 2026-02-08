@@ -353,9 +353,8 @@ img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 8px;
-    mask-image: radial-gradient(ellipse 85% 85% at center, black 55%, transparent 100%);
-    -webkit-mask-image: radial-gradient(ellipse 85% 85% at center, black 55%, transparent 100%);
+    border-radius: 50% 50% 5% 5% / 40% 40% 5% 5%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
 .hero-content {
@@ -497,7 +496,6 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
     pointer-events: none;
     z-index: 0;
 }
@@ -505,8 +503,9 @@ img {
 .floating-shapes span {
     position: absolute;
     display: block;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+    bottom: -100px;
     animation: float linear infinite;
 }
 
@@ -514,15 +513,14 @@ img {
     width: 80px;
     height: 80px;
     left: 10%;
-    animation-duration: 25s;
-    animation-delay: 0s;
+    animation-duration: 20s;
 }
 
 .floating-shapes span:nth-child(2) {
     width: 40px;
     height: 40px;
     left: 25%;
-    animation-duration: 20s;
+    animation-duration: 15s;
     animation-delay: 2s;
 }
 
@@ -530,8 +528,8 @@ img {
     width: 60px;
     height: 60px;
     left: 40%;
-    animation-duration: 28s;
-    animation-delay: 4s;
+    animation-duration: 18s;
+    animation-delay: 1s;
 }
 
 .floating-shapes span:nth-child(4) {
@@ -539,55 +537,60 @@ img {
     height: 100px;
     left: 55%;
     animation-duration: 22s;
-    animation-delay: 1s;
+    animation-delay: 3s;
 }
 
 .floating-shapes span:nth-child(5) {
     width: 50px;
     height: 50px;
     left: 70%;
-    animation-duration: 30s;
-    animation-delay: 3s;
+    animation-duration: 16s;
+    animation-delay: 5s;
 }
 
 .floating-shapes span:nth-child(6) {
     width: 70px;
     height: 70px;
     left: 85%;
-    animation-duration: 24s;
-    animation-delay: 5s;
+    animation-duration: 19s;
+    animation-delay: 4s;
 }
 
 .floating-shapes span:nth-child(7) {
     width: 35px;
     height: 35px;
     left: 5%;
-    animation-duration: 26s;
-    animation-delay: 7s;
+    animation-duration: 14s;
+    animation-delay: 6s;
 }
 
 .floating-shapes span:nth-child(8) {
     width: 90px;
     height: 90px;
     left: 60%;
-    animation-duration: 32s;
-    animation-delay: 2s;
+    animation-duration: 24s;
+    animation-delay: 1s;
 }
 
 @keyframes float {
     0% {
-        transform: translateY(100vh) rotate(0deg);
+        bottom: -100px;
         opacity: 0;
+        transform: translateX(0) rotate(0deg);
     }
-    10% {
-        opacity: 0.08;
+    5% {
+        opacity: 0.1;
     }
-    90% {
-        opacity: 0.08;
+    50% {
+        transform: translateX(30px) rotate(180deg);
+    }
+    95% {
+        opacity: 0.1;
     }
     100% {
-        transform: translateY(-100px) rotate(360deg);
+        bottom: 100%;
         opacity: 0;
+        transform: translateX(-30px) rotate(360deg);
     }
 }
 
