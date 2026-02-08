@@ -323,21 +323,46 @@ img {
     align-items: center;
     padding-top: 100px;
     position: relative;
-    background: linear-gradient(135deg, #4a3d6e 0%, #5d4e7a 25%, #7c6a9c 50%, #5d4e7a 75%, #4a3d6e 100%);
+    background: linear-gradient(135deg, #4a3d6e 0%, #5d4e7a 40%, #7c6a9c 100%);
     overflow: hidden;
 }
 
 .hero::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: -50%;
+    left: -30%;
+    width: 80%;
+    height: 80%;
     background: 
-        radial-gradient(circle at 0% 0%, rgba(255,255,255,0.15) 0%, transparent 40%),
-        radial-gradient(circle at 100% 100%, rgba(255,255,255,0.1) 0%, transparent 35%);
+        conic-gradient(
+            from 180deg at 50% 50%,
+            transparent 0deg,
+            rgba(255,255,255,0.03) 10deg,
+            transparent 20deg,
+            rgba(255,255,255,0.05) 40deg,
+            transparent 50deg,
+            rgba(255,255,255,0.03) 70deg,
+            transparent 80deg,
+            rgba(255,255,255,0.04) 100deg,
+            transparent 110deg,
+            rgba(255,255,255,0.03) 130deg,
+            transparent 140deg,
+            rgba(255,255,255,0.05) 160deg,
+            transparent 180deg
+        ),
+        radial-gradient(circle at 0% 0%, rgba(255,255,255,0.25) 0%, transparent 50%);
     pointer-events: none;
+    animation: rotateRays 60s linear infinite;
+}
+
+@keyframes rotateRays {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .hero-grid {
