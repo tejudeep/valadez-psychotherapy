@@ -11,12 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
    
    setTimeout(() => {
        splash.classList.add('hidden');
-   }, 4000);
+   }, 3000);
    
    // Remove from DOM after animation
    setTimeout(() => {
        splash.style.display = 'none';
-   }, 5000);
+   }, 4000);
    
     // ============================================
     // NAVBAR SCROLL EFFECT
