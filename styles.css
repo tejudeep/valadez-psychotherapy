@@ -515,113 +515,6 @@ img {
 }
 
 /* ============================================
-   FLOATING ANIMATION
-   ============================================ */
-.floating-shapes {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.floating-shapes span {
-    position: absolute;
-    display: block;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    bottom: -100px;
-    animation: float linear infinite;
-}
-
-.floating-shapes span:nth-child(1) {
-    width: 80px;
-    height: 80px;
-    left: 10%;
-    animation-duration: 20s;
-}
-
-.floating-shapes span:nth-child(2) {
-    width: 40px;
-    height: 40px;
-    left: 25%;
-    animation-duration: 15s;
-    animation-delay: 2s;
-}
-
-.floating-shapes span:nth-child(3) {
-    width: 60px;
-    height: 60px;
-    left: 40%;
-    animation-duration: 18s;
-    animation-delay: 1s;
-}
-
-.floating-shapes span:nth-child(4) {
-    width: 100px;
-    height: 100px;
-    left: 55%;
-    animation-duration: 22s;
-    animation-delay: 3s;
-}
-
-.floating-shapes span:nth-child(5) {
-    width: 50px;
-    height: 50px;
-    left: 70%;
-    animation-duration: 16s;
-    animation-delay: 5s;
-}
-
-.floating-shapes span:nth-child(6) {
-    width: 70px;
-    height: 70px;
-    left: 85%;
-    animation-duration: 19s;
-    animation-delay: 4s;
-}
-
-.floating-shapes span:nth-child(7) {
-    width: 35px;
-    height: 35px;
-    left: 5%;
-    animation-duration: 14s;
-    animation-delay: 6s;
-}
-
-.floating-shapes span:nth-child(8) {
-    width: 90px;
-    height: 90px;
-    left: 60%;
-    animation-duration: 24s;
-    animation-delay: 1s;
-}
-
-@keyframes float {
-    0% {
-        bottom: -100px;
-        opacity: 0;
-        transform: translateX(0) rotate(0deg);
-    }
-    5% {
-        opacity: 0.1;
-    }
-    50% {
-        transform: translateX(30px) rotate(180deg);
-    }
-    95% {
-        opacity: 0.1;
-    }
-    100% {
-        bottom: 100%;
-        opacity: 0;
-        transform: translateX(-30px) rotate(360deg);
-    }
-}
-
-/* ============================================
    ABOUT SECTION
    ============================================ */
 .about {
@@ -1418,5 +1311,113 @@ img {
     .specialty-tags span {
         padding: 6px 14px;
         font-size: 0.8rem;
+    }
+}
+
+/* ============================================
+   FLOATING BUBBLES
+   ============================================ */
+.floating-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-shapes span {
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    top: 100%;
+    animation: floatUp 15s linear infinite;
+}
+
+.floating-shapes span:nth-child(1) {
+    left: 10%;
+    width: 80px;
+    height: 80px;
+    animation-duration: 18s;
+    animation-delay: 0s;
+}
+
+.floating-shapes span:nth-child(2) {
+    left: 25%;
+    width: 40px;
+    height: 40px;
+    animation-duration: 14s;
+    animation-delay: 2s;
+}
+
+.floating-shapes span:nth-child(3) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 20s;
+    animation-delay: 1s;
+}
+
+.floating-shapes span:nth-child(4) {
+    left: 55%;
+    width: 100px;
+    height: 100px;
+    animation-duration: 22s;
+    animation-delay: 3s;
+}
+
+.floating-shapes span:nth-child(5) {
+    left: 70%;
+    width: 50px;
+    height: 50px;
+    animation-duration: 16s;
+    animation-delay: 5s;
+}
+
+.floating-shapes span:nth-child(6) {
+    left: 85%;
+    width: 70px;
+    height: 70px;
+    animation-duration: 19s;
+    animation-delay: 2s;
+}
+
+.floating-shapes span:nth-child(7) {
+    left: 5%;
+    width: 35px;
+    height: 35px;
+    animation-duration: 12s;
+    animation-delay: 4s;
+}
+
+.floating-shapes span:nth-child(8) {
+    left: 60%;
+    width: 90px;
+    height: 90px;
+    animation-duration: 24s;
+    animation-delay: 1s;
+}
+
+@keyframes floatUp {
+    0% {
+        top: 100%;
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.15;
+    }
+    95% {
+        opacity: 0.15;
+    }
+    100% {
+        top: -20%;
+        transform: rotate(360deg);
+        opacity: 0;
     }
 }
