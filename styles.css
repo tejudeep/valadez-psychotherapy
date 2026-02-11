@@ -1713,16 +1713,3 @@ img {
         display: none;
     }
 }
-
-/* ============================================
-   SITE PET
-   ============================================ */
-#site-pet {
-    image-rendering: auto;
-}
-
-@media (max-width: 768px) {
-    #site-pet {
-        display: none;
-    }
-}
