@@ -1453,14 +1453,14 @@ img {
 }
 
 /* ============================================
-   ANIMATED DOG (XOLOITZCUINTLI)
+   ANIMATED DOG
    ============================================ */
 .dog-container {
     position: fixed;
     bottom: 20px;
     left: -100px;
     z-index: 9998;
-    animation: dogRun 20s linear infinite;
+    animation: dogWalk 40s linear infinite;
     pointer-events: none;
 }
 
@@ -1468,11 +1468,12 @@ img {
     width: 80px;
     height: 60px;
     position: relative;
+    transform: scaleY(1); /* ensures right-side up */
 }
 
 .dog-body {
     position: relative;
-    animation: dogBounce 0.3s ease-in-out infinite;
+    animation: dogBounce 0.5s ease-in-out infinite;
 }
 
 .dog-torso {
@@ -1553,13 +1554,8 @@ img {
     top: 0;
 }
 
-.dog-eye.left {
-    left: 2px;
-}
-
-.dog-eye.right {
-    right: 2px;
-}
+.dog-eye.left { left: 2px; }
+.dog-eye.right { right: 2px; }
 
 .dog-nose {
     width: 6px;
@@ -1581,7 +1577,7 @@ img {
     bottom: -8px;
     right: -4px;
     transform: rotate(15deg);
-    animation: tonguePant 0.4s ease-in-out infinite;
+    animation: tonguePant 0.6s ease-in-out infinite;
 }
 
 .dog-tail {
@@ -1593,7 +1589,7 @@ img {
     left: 5px;
     border-radius: 10px;
     transform-origin: bottom center;
-    animation: tailWag 0.2s ease-in-out infinite;
+    animation: tailWag 0.3s ease-in-out infinite;
 }
 
 .dog-leg {
@@ -1618,36 +1614,34 @@ img {
 
 .dog-leg.front-left {
     left: 50px;
-    animation: legFront 0.3s ease-in-out infinite;
+    animation: legMove 0.5s ease-in-out infinite;
 }
 
 .dog-leg.front-right {
     left: 42px;
-    animation: legFront 0.3s ease-in-out infinite 0.15s;
+    animation: legMove 0.5s ease-in-out infinite 0.25s;
 }
 
 .dog-leg.back-left {
     left: 22px;
-    animation: legBack 0.3s ease-in-out infinite;
+    animation: legMove 0.5s ease-in-out infinite 0.25s;
 }
 
 .dog-leg.back-right {
     left: 14px;
-    animation: legBack 0.3s ease-in-out infinite 0.15s;
+    animation: legMove 0.5s ease-in-out infinite;
 }
 
-@keyframes dogRun {
+@keyframes dogWalk {
     0% {
         left: -100px;
-    }
-    45% {
-        left: calc(100vw + 100px);
-    }
-    45.1% {
-        left: calc(100vw + 100px);
         transform: scaleX(1);
     }
-    45.2% {
+    45% {
+        left: calc(100vw + 50px);
+        transform: scaleX(1);
+    }
+    45.1% {
         transform: scaleX(-1);
     }
     90% {
@@ -1659,55 +1653,30 @@ img {
     }
     100% {
         left: -100px;
+        transform: scaleX(1);
     }
 }
 
 @keyframes dogBounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-3px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
 }
 
-@keyframes legFront {
-    0%, 100% {
-        transform: rotate(-15deg);
-    }
-    50% {
-        transform: rotate(15deg);
-    }
-}
-
-@keyframes legBack {
-    0%, 100% {
-        transform: rotate(15deg);
-    }
-    50% {
-        transform: rotate(-15deg);
-    }
+@keyframes legMove {
+    0%, 100% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
 }
 
 @keyframes tailWag {
-    0%, 100% {
-        transform: rotate(-20deg);
-    }
-    50% {
-        transform: rotate(20deg);
-    }
+    0%, 100% { transform: rotate(-20deg); }
+    50% { transform: rotate(20deg); }
 }
 
 @keyframes tonguePant {
-    0%, 100% {
-        height: 12px;
-    }
-    50% {
-        height: 14px;
-    }
+    0%, 100% { height: 12px; }
+    50% { height: 15px; }
 }
 
-/* Hide dog on mobile - too distracting */
 @media (max-width: 768px) {
     .dog-container {
         display: none;
