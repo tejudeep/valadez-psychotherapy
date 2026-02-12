@@ -65,10 +65,9 @@
     
     function moveToElement(el) {
         const rect = el.getBoundingClientRect();
-        targetX = rect.left + rect.width / 2 - 40;
-        targetY = rect.top - 60;
+        targetX = rect.left + rect.width / 2 - 25;
+        targetY = rect.bottom + 5; // Below the menu item instead of above
         
-        // Determine direction
         direction = targetX > x ? 1 : -1;
         flip();
         
