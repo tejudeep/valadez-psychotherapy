@@ -3,7 +3,7 @@
     const img = document.getElementById('dante-img');
     
     const gifs = {
-        walk: 'dantewalking.GIF',
+        walk: 'dantewalking.gif',
         run: 'danterunning.gif',
         chill: 'dantechilling.gif',
         face: 'danteface.gif'
